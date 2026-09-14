@@ -3,7 +3,7 @@ title: ID Management App
 category: Product Design
 pills: [Product Design, Live App]
 tools: [Google AppSheet]
-cover: assets/projects/project-01-cover.jpg
+cover: assets/projects/ID_management_app-cover.png
 ---
 
 ## TLDR
