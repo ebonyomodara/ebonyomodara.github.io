@@ -731,65 +731,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 </div>
 
 <script>
-const projects = [
-  {
-    title: "ID Management App",
-    desc: "Built a family document-tracking app from a spreadsheet, with automated renewal alerts and accessible multi-device views.",
-    category: "Product Design",
-    pills: ["Product Design", "Live App"],
-    color: "linear-gradient(135deg, #1B4DFF 0%, #6B8AFF 100%)",
-    featured: true
-  },
-  {
-    title: "Text-to-Image AI App",
-    desc: "Helping young language learners visualize vocabulary through generated imagery.",
-    category: "Research",
-    pills: ["Qualitative Research", "Live App", "Implementation Insights"],
-    color: "linear-gradient(135deg, #FF6A00 0%, #FFB870 100%)"
-  },
-  {
-    title: "Smartwear for Connection",
-    desc: "Wearable MVP keeping families connected through subtle haptic interactions.",
-    category: "Product Design",
-    pills: ["Product Design", "MVP"],
-    color: "linear-gradient(135deg, #F2A7CC 0%, #FFDBE9 100%)"
-  },
-  {
-    title: "Investigating AI use of University students",
-    desc: "Qualitative study exploring how students integrate AI tools into academic workflows.",
-    category: "Research",
-    pills: ["Qualitative Research", "Design Insights"],
-    color: "linear-gradient(135deg, #0D4D3A 0%, #4AC98B 100%)"
-  },
-  {
-    title: "Publications Monthly Reports",
-    desc: "Editorial reports covering emerging creative technology trends.",
-    category: "Publications",
-    pills: ["Publications", "Copywriting", "Report"],
-    color: "linear-gradient(135deg, #1A0B2E 0%, #8B5CF6 100%)"
-  },
-  {
-    title: "Immersive Tech Week",
-    desc: "Event coverage from Europe's leading immersive technology conference.",
-    category: "Publications",
-    pills: ["Publications", "Report"],
-    color: "linear-gradient(135deg, #2D1854 0%, #A855F7 100%)"
-  },
-  {
-    title: "Game-based Assessments in Recruitment",
-    desc: "Quantitative research into gamified hiring tools and their effectiveness.",
-    category: "Research",
-    pills: ["Quantitative Research", "Implementation Insights"],
-    color: "linear-gradient(135deg, #C4B5A0 0%, #E8DDD0 100%)"
-  },
-  {
-    title: "Multilingual Gesturing and Problem-Solving",
-    desc: "How gesture patterns differ across languages and influence cognitive problem-solving.",
-    category: "Research",
-    pills: ["Quantitative Research", "Cognition Insights"],
-    color: "linear-gradient(135deg, #D4956B 0%, #F0C8A8 100%)"
-  }
-];
+let projects = [];
+
+fetch('content/projects.json')
+  .then(res => res.json())
+  .then(data => {
+    projects = data;
+    renderProjects(getFiltered('Featured'));
+  })
+  .catch(() => {
+    document.getElementById('project-stack').innerHTML = '<div class="state-msg">Could not load projects.</div>';
+  });
 
 // Photo cycle
 const photoLink = document.getElementById('hero-photo-link');
@@ -870,8 +822,6 @@ function getFiltered(cat) {
   if (cat === 'Featured') return projects.filter(p => p.featured);
   return projects.filter(p => p.category === cat);
 }
-
-renderProjects(getFiltered('Featured'));
 
 // Filters
 document.getElementById('filters').addEventListener('click', e => {
