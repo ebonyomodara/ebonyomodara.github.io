@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project — Ebony Omodara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav">
+    <a href="index.html" class="nav__name">Ebony Omodara</a>
+    <div class="nav__links">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="#" target="_blank">LinkedIn ↗</a>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <p class="breadcrumb"><a href="index.html">Projects</a> / <span id="crumb">Project</span></p>
+  <h1 id="project-title">Loading...</h1>
+  <div class="project-meta" id="project-meta"></div>
+  <div class="project-cover" id="project-cover"></div>
+  <div class="project-body" id="project-body">
+    <p>Loading project...</p>
+  </div>
+  <div class="project-nav">
+    <a href="index.html#projects">← Back to projects</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug');
+const body = document.getElementById('project-body');
+
+if (!slug) {
+  body.innerHTML = '<p>No project specified.</p>';
+} else {
+  fetch(`content/projects/${slug}.md`)
+    .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+    .then(raw => {
+      const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+      if (!match) { body.innerHTML = marked.parse(raw); return; }
+      const [, fm, md] = match;
+      const meta = {};
+      fm.split('\n').forEach(line => {
+        const idx = line.indexOf(':');
+        if (idx === -1) return;
+        const key = line.slice(0, idx).trim();
+        let val = line.slice(idx + 1).trim();
+        if (val.startsWith('[') && val.endsWith(']'))
+          val = val.slice(1, -1).split(',').map(s => s.trim()).filter(Boolean);
+        meta[key] = val;
+      });
+      document.getElementById('project-title').textContent = meta.title || 'Project';
+      document.getElementById('crumb').textContent = meta.title || 'Project';
+      document.title = (meta.title || 'Project') + ' — Ebony Omodara';
+      const metaEl = document.getElementById('project-meta');
+      (Array.isArray(meta.pills) ? meta.pills : []).forEach(p => {
+        const span = document.createElement('span');
+        span.className = 'pill';
+        span.textContent = p;
+        metaEl.appendChild(span);
+      });
+      const cover = document.getElementById('project-cover');
+      if (meta.cover) {
+        const img = new Image();
+        img.onload = () => { cover.style.backgroundImage = `url(${meta.cover})`; };
+        img.src = meta.cover;
+      }
+      body.innerHTML = marked.parse(md.trim());
+    })
+    .catch(() => { body.innerHTML = '<p>This project could not be found.</p>'; });
+}
+</script>
+</body>
+</html>

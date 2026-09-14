@@ -1,0 +1,45 @@
+:root {
+  --bg: #FFFFFF;
+  --ink: #1A1A18;
+  --ink-soft: #555550;
+  --ink-faint: #8A8980;
+  --ink-muted: #A8A7A0;
+  --line: #E6E6E3;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --page-px: clamp(20px, 5vw, 64px);
+  --max-w: 820px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: var(--max-w); margin: 0 auto; padding-left: var(--page-px); padding-right: var(--page-px); }
+
+.nav { padding: 32px 0; display: flex; align-items: center; justify-content: space-between; }
+.nav__name { font-size: 14px; font-weight: 500; }
+.nav__links { display: flex; gap: 24px; }
+.nav__links a { font-size: 13px; color: var(--ink-soft); transition: color 0.15s; }
+.nav__links a:hover { color: var(--ink); }
+
+.breadcrumb { font-size: 13px; color: var(--ink-muted); margin: 24px 0 18px; }
+.breadcrumb a:hover { color: var(--ink); }
+
+h1 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 600; letter-spacing: -0.025em; margin-bottom: 16px; }
+
+.project-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px; }
+.pill { font-size: 11px; font-weight: 500; color: var(--ink-soft); border: 1px solid var(--line); padding: 3px 10px; border-radius: 100px; }
+
+.project-cover { width: 100%; aspect-ratio: 16/9; border-radius: 12px; background: var(--line) center/cover; margin-bottom: 48px; }
+
+.project-body { max-width: 680px; font-size: 16px; line-height: 1.65; }
+.project-body h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin: 48px 0 16px; }
+.project-body p { margin-bottom: 16px; color: var(--ink-soft); }
+.project-body ul { margin: 0 0 16px; padding-left: 20px; }
+.project-body li { margin-bottom: 8px; color: var(--ink-soft); }
+.project-body strong { color: var(--ink); font-weight: 600; }
+.project-body img { width: 100%; border-radius: 8px; margin: 12px 0 24px; }
+
+.project-nav { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); }
+.project-nav a { font-size: 14px; color: var(--ink-soft); transition: color 0.15s; }
+.project-nav a:hover { color: var(--ink); }

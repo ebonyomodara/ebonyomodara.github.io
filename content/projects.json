@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "slug": "project-01",
+    "title": "ID Management App",
+    "desc": "Built a family document-tracking app from a spreadsheet, with automated renewal alerts and accessible multi-device views.",
+    "category": "Product Design",
+    "pills": ["Product Design", "Live App"],
+    "cover": "assets/projects/project-01-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #1B4DFF 0%, #6B8AFF 100%)",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "slug": "project-02",
+    "title": "Text-to-Image AI App",
+    "desc": "Helping young language learners visualize vocabulary through generated imagery.",
+    "category": "Research",
+    "pills": ["Qualitative Research", "Live App", "Implementation Insights"],
+    "cover": "assets/projects/project-02-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #FF6A00 0%, #FFB870 100%)",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "slug": "project-03",
+    "title": "Smartwear for Connection",
+    "desc": "Wearable MVP keeping families connected through subtle haptic interactions.",
+    "category": "Product Design",
+    "pills": ["Product Design", "MVP"],
+    "cover": "assets/projects/project-03-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #F2A7CC 0%, #FFDBE9 100%)",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "slug": "project-04",
+    "title": "Investigating AI use of University students",
+    "desc": "Qualitative study exploring how students integrate AI tools into academic workflows.",
+    "category": "Research",
+    "pills": ["Qualitative Research", "Design Insights"],
+    "cover": "assets/projects/project-04-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #0D4D3A 0%, #4AC98B 100%)",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "slug": "project-05",
+    "title": "Creative Tech Monthly Reports",
+    "desc": "Editorial reports covering emerging creative technology trends.",
+    "category": "Publications",
+    "pills": ["Publications", "Copywriting", "Report"],
+    "cover": "assets/projects/project-05-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #1A0B2E 0%, #8B5CF6 100%)",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "slug": "project-06",
+    "title": "Immersive Tech Week",
+    "desc": "Event coverage from Europe's leading immersive technology conference.",
+    "category": "Publications",
+    "pills": ["Publications", "Report"],
+    "cover": "assets/projects/project-06-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #2D1854 0%, #A855F7 100%)",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "slug": "project-07",
+    "title": "Game-based Assessments in Recruitment",
+    "desc": "Quantitative research into gamified hiring tools and their effectiveness.",
+    "category": "Research",
+    "pills": ["Quantitative Research", "Implementation Insights"],
+    "cover": "assets/projects/project-07-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #C4B5A0 0%, #E8DDD0 100%)",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "slug": "project-08",
+    "title": "Multilingual Gesturing and Problem-Solving",
+    "desc": "How gesture patterns differ across languages and influence cognitive problem-solving.",
+    "category": "Research",
+    "pills": ["Quantitative Research", "Cognition Insights"],
+    "cover": "assets/projects/project-08-cover.jpg",
+    "coverColor": "linear-gradient(135deg, #D4956B 0%, #F0C8A8 100%)",
+    "featured": false
+  }
+]
