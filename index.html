@@ -773,14 +773,14 @@ const stack = document.getElementById('project-stack');
 
 function makeCard(p, isFeature, isSingle) {
   const a = document.createElement('a');
-  a.href = '#';
+  a.href = 'project.html?slug=' + p.slug;
   let cls = 'pcard';
   if (isFeature) cls += ' pcard--feature';
   if (isSingle) cls += ' pcard--single';
   a.className = cls;
   a.innerHTML = `
     <div class="pcard__cover">
-      <div class="pcard__cover-bg" style="background:${p.color}"></div>
+      <div class="pcard__cover-bg" style="background:${p.coverColor};background-image:url('${p.cover}');background-size:cover;background-position:center"></div>
     </div>
     <div class="pcard__body">
       <div class="pcard__category">${p.category}</div>
