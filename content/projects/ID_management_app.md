@@ -14,6 +14,15 @@ I developed an app to help my family keep track of their important documents.
 
 My family had a simple spreadsheet of personal documents and their expiration dates. I made an app for everyone to easily see their documents and get notified when things need to be renewed.
 
+### Responsibilites
+- Correspond **with the members** to understand which information was relevant and needed to be communicated.
+- **Transform** CSV file into a simple UI using **Google AppSheet**
+- **Test** the application with all users
+- **Launch** the application for all members
+
+#### Inspiration Statement
+> I can’t believe you let your drivers license expire…
+
 ## Feature Design
 
 The app had to be accessible by all users, meaning a diverse set of tech literacy skills and access points. I made sure information required little interaction to reach, with multiple ways to access it: by document holder, by country, by date, and by renewal urgency.
@@ -24,7 +33,7 @@ I set up a system that alerts document holders via email and app notifications w
 
 ## User Testing
 
-With each family member, I conducted a quick test to ensure they could easily find the information they needed. Through testing and iterations, I finalized an app that made all information types easily accessible.
+With each family member, I conducted a quick test to ensure they could easily find the information they needed. Through testing and iterations, I finalized an app that made all information types easily accessible, and that required little interactions to find what to do next in different use cases.
 
 ## Reflection
 

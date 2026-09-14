@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "slug": "project-01",
+    "slug": "ID_management_app",
     "title": "ID Management App",
-    "desc": "Built a family document-tracking app from a spreadsheet, with automated renewal alerts and accessible multi-device views.",
+    "desc": "I build and deployed a family document-tracking app, with automated renewal alerts and accessible multi-device views.",
     "category": "Product Design",
     "pills": ["Product Design", "Live App"],
     "cover": "assets/projects/ID_management_app-cover.png",
