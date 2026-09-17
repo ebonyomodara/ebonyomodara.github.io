@@ -22,7 +22,9 @@ My family had a simple spreadsheet of personal documents and their expiration da
 - **Launch** the application for all members
 
 #### Inspiration Statement
-> I can’t believe you let your drivers license expire…
+<div class="blockquote">
+I can't believe you let your drivers license expire. 
+</div>
 
 # Design Considerations
 
@@ -32,7 +34,7 @@ The app had to be accessible by all users, meaning a diverse set of tech literac
 # Automation
 
 I set up a system that alerts each document holder via email and app notifications when one of their documents are nearing expiration.
-![Automated Email](assets/projects/ID_management_automation-automation.png)
+![Automated Email](assets/projects/ID_management_automation-automation_image_.png)
 
 # User Testing
 
@@ -41,7 +43,7 @@ With each family member, I conducted a quick test to ensure they could easily fi
 
 # Reflection
 
-I really enjoyed this project because it gave me a chance to practice app development and UX testing in a quick, hands-on way. Since this project I've created and launched other apps at monks.com.
+I really enjoyed this project because it gave me a chance to practice app development and UX testing in a quick, hands-on way. Since this project I've created and launched other data management applications:
 
 <div class="callout">
 💡 Acheivement Management app @ monks.com
