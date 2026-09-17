@@ -29,13 +29,17 @@ My family had a simple spreadsheet of personal documents and their expiration da
 The app had to be accessible by all users, meaning a diverse set of tech literacy skills and access points. I made sure information required little interaction to reach, with multiple ways to access it: by document holder, by country, by date, and by renewal urgency.
 <div class="two-col">
    <img src="assets/projects/ID_management_automation-phone_mockup_1.png" alt="App screenshot - Phone Mockup">
-  <div> - Documents that required action appeared first in the view
-- Clear and distinctive iconography and coloring.
-- A view to understand the **chronological order** of who needs to renew their documents
-- A view to see documents by **document holder**
-- A view to see documents by **country**
-- A view to see documents by data → **calendar** view
-- A form structured in a detailed and logical order, outlining the required information while allowing **flexibility** to return and add missing details later.</div>
+    <div>
+    <ul>
+      <li>Documents that required action appeared first in the view</li>
+      <li>Clear and distinctive iconography and coloring</li>
+      <li>A view to understand the <strong>chronological order</strong> of who needs to renew their documents</li>
+      <li>A view to see documents by <strong>document holder</strong></li>
+      <li>A view to see documents by <strong>country</strong></li>
+      <li>A view to see documents by date → <strong>calendar</strong> view</li>
+      <li>A form structured in a detailed and logical order, allowing <strong>flexibility</strong> to return and add missing details later</li>
+    </ul>
+  </div>
 </div>
 
 
