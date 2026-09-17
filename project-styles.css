@@ -63,7 +63,24 @@ h1 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 600; letter-spacing: -0.0
   margin-bottom: 0;
   color: var(--ink);
 }
+.project-body .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
 
+.project-body .two-col img {
+  width: 100%;
+  margin: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .project-body .two-col {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-nav { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); }
 .project-nav a { font-size: 14px; color: var(--ink-soft); transition: color 0.15s; }

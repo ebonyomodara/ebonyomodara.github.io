@@ -22,19 +22,29 @@ My family had a simple spreadsheet of personal documents and their expiration da
 - **Launch** the application for all members
 
 #### Inspiration Statement
-<div class="blockquote">
-I can't believe you let your drivers license expire. 
-</div>
+> I can't believe you let your drivers license expire. 
 
 # Design Considerations
 
 The app had to be accessible by all users, meaning a diverse set of tech literacy skills and access points. I made sure information required little interaction to reach, with multiple ways to access it: by document holder, by country, by date, and by renewal urgency.
-![App screenshot - Adding a document](assets/projects/ID_management_automation-phone_mockup_1.png)
+<div class="two-col">
+   <img src="assets/projects/ID_management_automation-phone_mockup_1.png" alt="App screenshot - Phone Mockup">
+  <div> - Documents that required action appeared first in the view
+- Clear and distinctive iconography and coloring.
+- A view to understand the **chronological order** of who needs to renew their documents
+- A view to see documents by **document holder**
+- A view to see documents by **country**
+- A view to see documents by data → **calendar** view
+- A form structured in a detailed and logical order, outlining the required information while allowing **flexibility** to return and add missing details later.</div>
+</div>
+
+
+
 
 # Automation
 
 I set up a system that alerts each document holder via email and app notifications when one of their documents are nearing expiration.
-![Automated Email](assets/projects/ID_management_automation-automation_image_.png)
+![Automated Email](assets/projects/ID_management_automation-automation_image.png)
 
 # User Testing
 
