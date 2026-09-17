@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "slug": "ID_management_app",
-    "title": "ID Management App",
+    "slug": "ID_management_automation",
+    "title": "ID Management Automation",
     "desc": "I build and deployed a family document-tracking app, with automated renewal alerts and accessible multi-device views.",
     "category": "Product Design",
     "pills": ["Product Design", "Live App"],
-    "cover": "assets/projects/ID_management_app-cover.png",
+    "cover": "assets/projects/ID_management_automation-cover.png",
     "coverColor": "linear-gradient(135deg, #1B4DFF 0%, #6B8AFF 100%)",
     "featured": true
   },
